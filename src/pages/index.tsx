@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next"
 
-interface HomeProps {
+type Episode = {
   id: string
   title: string
   members: string
@@ -14,10 +14,13 @@ interface HomeProps {
   }
 }
 
-export default function Home({ episodes }) {
+type HomeProps = {
+  episodes: Episode[]
+}
 
+export default function Home({ episodes }: HomeProps) {
   return (
-    <h1>index</h1>
+    <h1>{}</h1>
   )
 }
 
