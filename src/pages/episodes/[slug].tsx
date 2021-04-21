@@ -37,7 +37,7 @@ export default function Episode({ episode }: Episode) {
         </Link>
         <Image
           width={700}
-          height={160}
+          height={240}
           src={episode.thumbnail}
           objectFit="cover"
         />
