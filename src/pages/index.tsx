@@ -1,14 +1,18 @@
-import { GetStaticProps } from "next"
-import Image from "next/image"
+import { useContext } from "react"
+
 import Link from "next/link"
+import Image from "next/image"
+import { GetStaticProps } from "next"
+
 import { format, parseISO } from "date-fns"
 import ptBR from "date-fns/locale/pt-BR"
+
 import { api } from "../services/api"
+import { PlayerContext } from "../contexts/PlayerContext"
+
 import { convertDurationToTimeString } from "../utils/convertDurationToTimeString"
 
 import styles from "./home.module.scss"
-import { PlayerContext } from "../contexts/PlayerContext"
-import { useContext } from "react"
 
 type Episode = {
   id: string
