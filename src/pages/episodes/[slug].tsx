@@ -24,7 +24,7 @@ type Episode = {
 }
 
 export default function Episode({ episode }: Episode) {
-  const {} = usePlayer()
+  const { play } = usePlayer()
 
   return (
     <div className={style.episode}>
@@ -40,7 +40,7 @@ export default function Episode({ episode }: Episode) {
           src={episode.thumbnail}
           objectFit="cover"
         />
-        <button type="button">
+        <button type="button" onClick={() => play(episode)}>
           <img src="/play.svg" alt="Tocar episódio"/>
         </button>
       </div>
