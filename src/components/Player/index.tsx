@@ -11,7 +11,7 @@ import styles from "./styles.module.scss"
 export function Player() {
   const audioRef = useRef<HTMLAudioElement>(null)
 
-  const { episodeList, currentEpisodeIndex, isPlaying, isLooping, togglePlay, setPlayingState, playNext, playPrevious, hasNext, hasPrevious } = usePlayer()
+  const { episodeList, currentEpisodeIndex, isPlaying, isLooping, isShuffling, togglePlay, toggleLoop, toggleShuffle, setPlayingState, playNext, playPrevious, hasNext, hasPrevious } = usePlayer()
 
   useEffect(() => {
     if(!audioRef.current) {
@@ -81,7 +81,7 @@ export function Player() {
         ) }
 
         <div className={styles.buttons}>
-          <button type="button" disabled={!episode}>
+          <button type="button" disabled={!episode || episodeList.length == 1} onClick={toggleShuffle} className={isShuffling ? styles.isActive : ""}>
             <img src="/shuffle.svg" alt="Embaralhar"/>
           </button>
           <button type="button" onClick={playPrevious} disabled={!episode || !hasPrevious}>
@@ -96,7 +96,7 @@ export function Player() {
           <button type="button" onClick={playNext} disabled={!episode || !hasNext}>
             <img src="/play-next.svg" alt="Tocar próxima"/>
           </button>
-          <button type="button" disabled={!episode}>
+          <button type="button" disabled={!episode} onClick={toggleLoop} className={isLooping ? styles.isActive : ""}>
             <img src="/repeat.svg" alt="Repetir"/>
           </button>
         </div>
