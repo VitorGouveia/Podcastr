@@ -7,6 +7,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 import style from "./episode.module.scss"
+import { usePlayer } from "../../contexts/PlayerContext"
 
 type Episode = {
   episode: {
@@ -23,6 +24,8 @@ type Episode = {
 }
 
 export default function Episode({ episode }: Episode) {
+  const {} = usePlayer()
+
   return (
     <div className={style.episode}>
       <div className={style.thumbnailContainer}>
