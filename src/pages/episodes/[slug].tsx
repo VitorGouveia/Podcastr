@@ -1,14 +1,17 @@
+import Head from "next/head"
 import { GetStaticProps, GetStaticPaths } from "next"
-import { api } from "../../services/api"
-import { format, parseISO } from "date-fns"
-import ptBR from "date-fns/locale/pt-BR"
-import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString"
 import Image from "next/image"
 import Link from "next/link"
 
-import style from "./episode.module.scss"
+import { format, parseISO } from "date-fns"
+import ptBR from "date-fns/locale/pt-BR"
+
+import { api } from "../../services/api"
+import { convertDurationToTimeString } from "../../utils/convertDurationToTimeString"
+
 import { usePlayer } from "../../contexts/PlayerContext"
-import Head from "next/head"
+
+import style from "./episode.module.scss"
 
 type Episode = {
   episode: {
