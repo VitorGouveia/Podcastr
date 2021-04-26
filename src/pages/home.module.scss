@@ -171,3 +171,9 @@
     }
   }
 }
+
+@media (max-width: 980px) {
+  .homepage {
+    height: calc(100vh - 14rem);
+  }
+}
