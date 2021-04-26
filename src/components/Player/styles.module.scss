@@ -137,3 +137,44 @@
     }
   }
 }
+
+@media (max-width: 980px) {
+  .playerContainer {
+    flex-direction: row;
+
+    height: auto;
+    width: 100%;
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    header {
+      display: none;
+    }
+
+    .emptyPlayer {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    footer {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      justify-content: space-between;
+
+      .progress {
+        margin-left: 3rem;
+        width: 60%;
+      }
+
+      .buttons {
+        margin-top: 0;
+      }
+    }
+  }
+}
