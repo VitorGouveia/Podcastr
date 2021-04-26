@@ -97,7 +97,7 @@
   <strong>Clone o projeto</strong>
 
   ```bash
-  git clone https://github.com/VitorGouveia/NLW-5-ReactJS.git
+  git clone https://github.com/VitorGouveia/Podcastr.git
   ```
 
   <br>
