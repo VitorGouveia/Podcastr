@@ -11,7 +11,7 @@ import styles from "../styles/app.module.scss"
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    localStorage.setItem("theme", "light")
+    localStorage.setItem("theme", "dark")
 
     const currentTheme = localStorage.getItem("theme")
 
