@@ -11,11 +11,17 @@ import styles from "../styles/app.module.scss"
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    localStorage.setItem("theme", "dark")
-
     const currentTheme = localStorage.getItem("theme")
 
-    document.body.classList.toggle(currentTheme)
+    if(!currentTheme || currentTheme == null || currentTheme == "") {
+      localStorage.setItem("theme", "light")
+      document.body.classList.add("light")
+    }
+
+    if(currentTheme == "dark" || currentTheme == "light") {
+      document.body.classList.add(currentTheme)
+      return
+    }
   }, [])
 
   return(
