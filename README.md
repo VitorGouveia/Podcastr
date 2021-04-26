@@ -62,8 +62,97 @@
 <br>
 <br>
 
-<h1 aling="center">
-  <strong>Layout</strong>
+<h1 align="center">
+  <strong>🔖 Layout</strong>
 </h1>
 
+<p>
+  Veja o layout desse projeto no figma.
 
+  - [Podcastr Web](https://www.figma.com/file/F0g1TtbiyE9HM6n2g0Jezf/Podcastr?node-id=160%3A2761)
+
+  Você precisa ter uma conta do [Figma](http://figma.com) para ter acesso.
+</p>
+
+<br>
+<br>
+
+<h1 align="center">
+  <strong>📝 Licensa</strong>
+</h1>
+
+<p>
+  <small>Esse projeto está sobre a licensa do MIT.
+  Veja a [Licensa](LICENSE.md) para mais detalhes.</small>
+</p>
+
+<br>
+<br>
+
+<h1 align="center">
+  <strong>🚀 Getting Started</strong>
+</h1>
+
+<p>
+  <strong>Clone o projeto</strong>
+
+  ```bash
+  git clone https://github.com/VitorGouveia/NLW-5-ReactJS.git
+  ```
+
+  <br>
+
+  <strong>Acesse a pasta</strong>
+
+  ```bash
+  cd NLW-5-ReactJS
+  ```
+
+  <br>
+  <br>
+
+  <strong>Siga os passos a seguir</strong>
+
+  ```bash
+  # Instale as dependências
+  npm i
+
+  # Inicie o JSON server
+  npm run server
+
+  # Inicie o app
+  npm run dev
+
+  # ou
+
+  # Instale as dependências
+  yarn
+
+  # Inicie o JSON server
+  yarn server
+
+  # Inicie o servidor de desenvolvimento
+  yarn dev
+  ```
+
+  <br>
+  <br>
+
+  <strong>Crie a build do projeto</strong>
+
+  ```bash
+  npm run build
+
+  #ou
+
+  yarn build
+
+  # inicie o servidor
+
+  npm start
+
+  #ou
+
+  yarn start
+  ```
+</p>
