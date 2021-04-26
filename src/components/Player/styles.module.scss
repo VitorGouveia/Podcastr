@@ -165,15 +165,40 @@
       flex-direction: row;
       align-items: center;
 
-      justify-content: space-between;
+      gap: 3rem;
+
+      justify-content: flex-end;
 
       .progress {
-        margin-left: 3rem;
-        width: 60%;
+        display: none;
       }
 
       .buttons {
         margin-top: 0;
+      }
+    }
+
+    .currentEpisode {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 4fr;
+      column-gap: 2rem;
+      place-items: flex-start;
+
+      img {
+        width: auto;
+        height: auto;
+      }
+
+      strong {
+        font-size: 1rem;
+        margin-top: 0;
+      }
+
+      span {
+        font-size: 1rem;
+        margin-top: 0;
+        grid-column: 2;
       }
     }
   }
