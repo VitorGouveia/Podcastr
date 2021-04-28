@@ -1,8 +1,10 @@
+import { useState } from "react"
 import Head from "next/head"
 
 import styles from "../styles/settings.module.scss"
 
 export default function Settings() {
+  const [currentTheme, setCurrentTheme] = useState(false)
 
   return (
     <div className={styles.settings}>
@@ -13,30 +15,28 @@ export default function Settings() {
       <section className={styles.themeSettings}>
         <h2>Temas</h2>
 
-        <ul>
-          <form>
+          <ul>
             <li>
-              <label>
+              <label onClick={() => setCurrentTheme(!currentTheme)}>
                 <img width="192" height="192" src="light.jpg" alt="Tema Claro" />
 
                 <div className={styles.themeDetails}>
                   <span>Tema Claro</span>
-                  <input type="radio" />
+                  <input onChange={() => {}} checked={currentTheme} type="radio" />
                 </div>
               </label>
             </li>
             <li>
-              <label>
+              <label onClick={() => setCurrentTheme(!currentTheme)}>
                 <img width="192" height="192" src="dark.png" alt="Tema Escuro" />
 
                 <div className={styles.themeDetails}>
                   <span>Tema Escuro</span>
-                  <input type="radio" />
+                  <input onChange={() => {}} checked={!currentTheme} type="radio" />
                 </div>
               </label>
             </li>
-          </form>
-        </ul>
+          </ul>
       </section>
     </div>
   )
