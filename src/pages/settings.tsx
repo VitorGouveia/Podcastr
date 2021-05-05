@@ -1,10 +1,21 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Head from "next/head"
 
 import styles from "../styles/settings.module.scss"
 
 export default function Settings() {
-  const [currentTheme, setCurrentTheme] = useState(false)
+  const [currentTheme, setCurrentTheme] = useState("")
+
+  useEffect(() => {
+    const currentLocalStorageTheme = localStorage.getItem("theme")
+    setCurrentTheme(currentLocalStorageTheme)
+  })
+
+  function setTheme(theme) {
+    localStorage.setItem("theme", theme)
+    document.body.className = theme
+    setCurrentTheme(theme)
+  }
 
   return (
     <div className={styles.settings}>
@@ -17,22 +28,32 @@ export default function Settings() {
 
           <ul>
             <li>
-              <label onClick={() => setCurrentTheme(!currentTheme)}>
+              <label>
                 <img width="192" height="192" src="light.jpg" alt="Tema Claro" />
 
                 <div className={styles.themeDetails}>
-                  <span>Tema Claro</span>
-                  <input onChange={() => {}} checked={currentTheme} type="radio" />
+                  <span>Claro</span>
+                  <input checked={currentTheme == "light"} onClick={() => setTheme("light")} onChange={() => {}} type="radio" name="theme" />
                 </div>
               </label>
             </li>
             <li>
-              <label onClick={() => setCurrentTheme(!currentTheme)}>
+              <label>
                 <img width="192" height="192" src="dark.png" alt="Tema Escuro" />
 
                 <div className={styles.themeDetails}>
-                  <span>Tema Escuro</span>
-                  <input onChange={() => {}} checked={!currentTheme} type="radio" />
+                  <span>Escuro</span>
+                  <input checked={currentTheme == "dark"} onClick={() => setTheme("dark")} onChange={() => {}} type="radio" name="theme" />
+                </div>
+              </label>
+            </li>
+            <li>
+              <label>
+                <img width="192" height="192" src="dark.png" alt="Tema Escuro" />
+
+                <div className={styles.themeDetails}>
+                  <span>Omni</span>
+                  <input checked={currentTheme == "omni"} onClick={() => setTheme("omni")} onChange={() => {}} type="radio" name="theme" />
                 </div>
               </label>
             </li>
