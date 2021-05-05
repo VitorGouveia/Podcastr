@@ -49,11 +49,11 @@ export default function Settings() {
             </li>
             <li>
               <label>
-                <img width="192" height="192" src="dark.png" alt="Tema Escuro" />
+                <img width="192" height="192" src="dark.png" alt="Tema Alternativo" />
 
                 <div className={styles.themeDetails}>
-                  <span>Omni</span>
-                  <input checked={currentTheme == "omni"} onClick={() => setTheme("omni")} onChange={() => {}} type="radio" name="theme" />
+                  <span>Launchbase</span>
+                  <input checked={currentTheme == "omni"} onClick={() => setTheme("launchbase")} onChange={() => {}} type="radio" name="theme" />
                 </div>
               </label>
             </li>
