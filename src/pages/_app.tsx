@@ -1,4 +1,7 @@
 import "../styles/global.scss"
+import "../styles/themes/dark.scss"
+import "../styles/themes/light.scss"
+import "../styles/themes/omni.scss"
 
 import { useEffect } from "react"
 
