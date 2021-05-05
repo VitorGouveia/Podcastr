@@ -6,10 +6,10 @@ import { GetStaticProps } from "next"
 import { format, parseISO } from "date-fns"
 import ptBR from "date-fns/locale/pt-BR"
 
-import { api } from "../services/api"
-import { usePlayer } from "../contexts/PlayerContext"
+import { api } from "@services/api"
+import { usePlayer } from "@contexts/PlayerContext"
 
-import { convertDurationToTimeString } from "../utils/convertDurationToTimeString"
+import { convertDurationToTimeString } from "@utils/convertDurationToTimeString"
 
 import styles from "./home.module.scss"
 
