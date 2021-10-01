@@ -6,6 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "web": "run-s build start",
+    "deploy": "run-p server web",
     "server": "json-server server.json -w -d 750 -p 3333"
   },
   "dependencies": {
@@ -22,6 +24,7 @@
     "@types/node": "^14.14.41",
     "@types/react": "^17.0.3",
     "json-server": "^0.16.3",
+    "npm-run-all": "^4.1.5",
     "typescript": "^4.2.4"
   }
 }
