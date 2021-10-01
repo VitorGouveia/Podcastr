@@ -105,7 +105,7 @@
   <strong>Acesse a pasta</strong>
 
   ```bash
-  cd NLW-5-ReactJS
+  cd podcastr
   ```
 
   <br>
